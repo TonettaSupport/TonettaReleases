@@ -1,0 +1,97 @@
+{
+  "name": "tonetta-popup",
+  "productName": "Tonetta",
+  "version": "1.0.18",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "clean": "rimraf dist",
+    "generate-env": "node generate-env-config.js",
+    "prebuild": "npm run clean && npm run generate-env && node -e \"const fs=require('fs'); const path=require('path'); const src=path.join('src','assets','Tonetta.ico'); const dest=path.join('build','Tonetta.ico'); fs.mkdirSync('build',{recursive:true}); fs.copyFileSync(src,dest);\"",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac",
+    "preinstall": "npm-force-resolutions",
+    "pull-files": "node pull-server-files.js",
+    "push-files": "node push-server-files.js",
+    "monitor-server": "node -e \"const cp = require('child_process'); const path = require('path'); const env = require('dotenv').config().parsed; const ip = (env.SERVER_URL || '3.142.145.75').replace(/^https?:\\/\\//, '').split(':')[0]; cp.spawn('ssh', ['-i', 'tonetta_joe.pem', '-o', 'StrictHostKeyChecking=no', 'ubuntu@' + ip, 'tail -f ~/serverFiles/server.log'], { stdio: 'inherit', shell: true });\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Tonetta",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "dotenv": "^17.2.3",
+    "electron-updater": "^6.7.3",
+    "form-data": "^4.0.5",
+    "keytar": "^7.9.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "electron": "^40.0.0",
+    "electron-builder": "^26.8.1",
+    "npm-force-resolutions": "^0.0.3",
+    "sharp": "^0.34.5"
+  },
+  "build": {
+    "appId": "com.tonetta.ai",
+    "productName": "Tonetta",
+    "files": [
+      "**/*",
+      "env-config.js",
+      "!.env",
+      "!.env.*",
+      "!generate-env-config.js",
+      "!dist",
+      "!.git",
+      "!venv",
+      "!venv/**"
+    ],
+    "asarUnpack": [],
+    "win": {
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      },
+      "icon": "src/assets/Tonetta.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "src/assets/Tonetta.icns",
+      "category": "public.app-category.utilities",
+      "protocols": {
+        "name": "tonetta",
+        "schemes": [
+          "tonetta"
+        ]
+      }
+    },
+    "protocols": {
+      "name": "tonetta",
+      "schemes": [
+        "tonetta"
+      ]
+    },
+    "extraResources": [
+      "extra-resources/VBCable_MACDriver_Pack108.dmg"
+    ]
+  },
+  "overrides": {
+    "undici": "^6.23.0",
+    "elliptic": "^6.6.1"
+  },
+  "resolutions": {
+    "undici": "^6.23.0",
+    "elliptic": "^6.6.1"
+  }
+}
