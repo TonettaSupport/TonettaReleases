@@ -1,7 +1,7 @@
 {
   "name": "tonetta-popup",
   "productName": "Tonetta",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
