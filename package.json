@@ -1,7 +1,7 @@
 {
   "name": "tonetta-popup",
   "productName": "Tonetta",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -48,7 +48,12 @@
       "!venv",
       "!venv/**"
     ],
-    "asarUnpack": [],
+    "asarUnpack": [
+      "*.py",
+      "*.dll",
+      "*.exe",
+      "!node_modules"
+    ],
     "win": {
       "target": {
         "target": "nsis",
