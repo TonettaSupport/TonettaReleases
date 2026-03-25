@@ -1,8 +1,8 @@
 {
-    "version": "1.0.25",
-    "url": "https://updates.tonetta.ai/Tonetta-Setup-1.0.25.exe",
+    "version": "1.0.26",
+    "url": "https://updates.tonetta.ai/Tonetta-Setup-1.0.26.exe",
     "date": "2026-03-25",
-    "sha256": "749C88571AEB14A49F27C3A6B13B45F452D7C0F9FDEDD1778F7BA98913D2B262",
+    "sha256": "FBC87E4187C7EB9374B025DEAD18E12E323ADE73DD6CD8B9815C118E0F64625E",
     "latest_changes": [
         "Smart Server Selection: Enforced automatic best-server selection based on real-time load metrics.",
         "Enhanced Update UI: New style standalone updater with full Light/Dark theme support.",
