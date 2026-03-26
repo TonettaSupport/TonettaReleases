@@ -10,7 +10,7 @@
     "prebuild": "npm run clean && npm run generate-env && node -e \"const fs=require('fs'); const path=require('path'); const src=path.join('src','assets','Tonetta.ico'); const dest=path.join('build','Tonetta.ico'); fs.mkdirSync('build',{recursive:true}); fs.copyFileSync(src,dest);\"",
     "build": "electron-builder",
     "build:win": "npm run build:python-win && electron-builder --win --x64",
-    "build:python-win": "python -m PyInstaller --onefile --noconsole --distpath . audio_passthrough.py && python -m PyInstaller --onefile --noconsole --distpath . system_audio_capture.py",
+    "build:python-win": "python -m PyInstaller --onefile --noconsole --distpath . --hidden-import scipy._lib.array_api_compat.numpy.fft --collect-submodules scipy audio_passthrough.py && python -m PyInstaller --onefile --noconsole --distpath . --collect-all vosk system_audio_capture.py",
     "build:mac": "electron-builder --mac",
     "preinstall": "npm-force-resolutions",
     "pull-files": "node pull-server-files.js",
