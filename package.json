@@ -14,6 +14,7 @@
     "build:mac": "electron-builder --mac",
     "preinstall": "npm-force-resolutions",
     "pull-files": "node pull-server-files.js",
+    "pull-server": "npm run pull-files",
     "push-files": "node push-server-files.js",
     "monitor-server": "node -e \"const cp = require('child_process'); const path = require('path'); const env = require('dotenv').config().parsed; const ip = (env.SERVER_URL || '3.142.145.75').replace(/^https?:\\/\\//, '').split(':')[0]; cp.spawn('ssh', ['-i', 'tonetta_joe.pem', '-o', 'StrictHostKeyChecking=no', 'ubuntu@' + ip, 'tail -f ~/serverFiles/server.log'], { stdio: 'inherit', shell: true });\""
   },
