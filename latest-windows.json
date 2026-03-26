@@ -1,14 +1,10 @@
 {
-    "version": "1.0.26",
-    "url": "https://updates.tonetta.ai/Tonetta-Setup-1.0.26.exe",
+    "version": "1.0.27",
+    "url": "https://updates.tonetta.ai/TonettaSetup_1.0.27.exe",
     "date": "2026-03-25",
-    "sha256": "FBC87E4187C7EB9374B025DEAD18E12E323ADE73DD6CD8B9815C118E0F64625E",
+    "sha256": "D6FA99247EB8F1120F75EA881F0FEAA26AB916E759E9A2B209958E21028D25C6",
     "latest_changes": [
-        "Smart Server Selection: Enforced automatic best-server selection based on real-time load metrics.",
-        "Enhanced Update UI: New style standalone updater with full Light/Dark theme support.",
-        "Improved Connection Stability: Migrated to dynamic Cloudflare server fetching for higher reliability.",
-        "Call Session Persistence: Call processing now persists in the background if the window is closed.",
-        "Metric Refinement: Optimized pitch inflection analysis."
+        "Fixed bugs."
     ],
     "history": []
 }
