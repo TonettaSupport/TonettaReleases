@@ -1,10 +1,19 @@
 {
-    "version": "1.0.27",
-    "url": "https://updates.tonetta.ai/TonettaSetup_1.0.27.exe",
-    "date": "2026-03-25",
-    "sha256": "B4A8A56291DB5AD13F314BC2EC1E2331EB0A037FBB2A3C91D22EF897311D55E9",
+    "version": "1.0.28",
+    "url": "https://updates.tonetta.ai/Tonetta-Setup-1.0.28.exe",
+    "date": "2026-03-26",
+    "sha256": "E464C1AA0B34E5752670DF647E883A737E3156D3A0155C9201E124D399FCF466",
     "latest_changes": [
-        "Fixed bugs."
+        "Fixed Prospect Interruption Mute: System audio capture no longer crashes on startup, restoring auto-mute when the prospect speaks.",
+        "Fixed Audio Engine Startup: Resolved scipy bundling error that prevented the audio passthrough engine from launching.",
+        "Fixed Microphone Selection: Dropdown now correctly highlights the selected microphone device.",
+        "Fixed Call Auto-Download: Background call polling now properly passes authentication credentials."
     ],
-    "history": []
+    "history": [
+        {
+            "version": "1.0.26",
+            "date": "2026-03-25",
+            "notes": "Smart Server Selection, Enhanced Update UI, Improved Connection Stability, Call Session Persistence, Metric Refinement, WebRTC VAD."
+        }
+    ]
 }
