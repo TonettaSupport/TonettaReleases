@@ -1,15 +1,19 @@
 {
-    "version": "1.0.28",
-    "url": "https://updates.tonetta.ai/Tonetta-Setup-1.0.28.exe",
+    "version": "1.0.29",
+    "url": "https://updates.tonetta.ai/Tonetta-Setup-1.0.29.exe",
     "date": "2026-03-26",
-    "sha256": "E464C1AA0B34E5752670DF647E883A737E3156D3A0155C9201E124D399FCF466",
+    "sha256": "21C8FB678AAE3C25679900F1E23BEC1C176354C4154DA84B53BFE7190AA73FA3",
     "latest_changes": [
-        "Fixed Prospect Interruption Mute: System audio capture no longer crashes on startup, restoring auto-mute when the prospect speaks.",
-        "Fixed Audio Engine Startup: Resolved scipy bundling error that prevented the audio passthrough engine from launching.",
-        "Fixed Microphone Selection: Dropdown now correctly highlights the selected microphone device.",
-        "Fixed Call Auto-Download: Background call polling now properly passes authentication credentials."
+        "Single-Session Enforcement: Only one device can be logged in at a time. Signing in on a new device automatically kicks the previous session.",
+        "Session Guard: Background polling detects when your session has been superseded and redirects to the login screen with a clear message.",
+        "Secure Session Tokens: Each login registers a unique session token in the database, ensuring reliable device-level session tracking."
     ],
     "history": [
+        {
+            "version": "1.0.28",
+            "date": "2026-03-26",
+            "notes": "Fixed Prospect Interruption Mute, Fixed Audio Engine Startup (scipy bundling), Fixed Microphone Selection, Fixed Call Auto-Download."
+        },
         {
             "version": "1.0.26",
             "date": "2026-03-25",
