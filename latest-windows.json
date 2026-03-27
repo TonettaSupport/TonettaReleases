@@ -1,8 +1,8 @@
 {
     "version": "1.0.29",
-    "url": "https://updates.tonetta.ai/TonettaSetup_1.0.29.exe",
+    "url": "https://updates.tonetta.ai/Tonetta-Setup-1.0.29.exe",
     "date": "2026-03-26",
-    "sha256": "21C8FB678AAE3C25679900F1E23BEC1C176354C4154DA84B53BFE7190AA73FA3",
+    "sha256": "591CDD24FB5E72F6D3934CE2C98043EA5B71B253DA95BDAE9810D2DCD68C7F05",
     "latest_changes": [
         "Single-Session Enforcement: Only one device can be logged in at a time. Signing in on a new device automatically kicks the previous session.",
         "Session Guard: Background polling detects when your session has been superseded and redirects to the login screen with a clear message.",
