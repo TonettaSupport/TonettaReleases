@@ -1,18 +1,35 @@
 {
-    "version": "1.0.29",
-    "url": "https://updates.tonetta.ai/Tonetta-Setup-1.0.29.exe",
-    "date": "2026-03-26",
-    "sha256": "591CDD24FB5E72F6D3934CE2C98043EA5B71B253DA95BDAE9810D2DCD68C7F05",
+    "version": "1.1.0",
+    "url": "https://github.com/TonettaSupport/TonettaReleases/releases/download/v1.1.0/TonettaSetup_1.1.0.exe",
+    "date": "2026-04-23",
+    "sha256": "97250313c9ea4264fbac6bce12eff411bb39ccbfe5b69dfff3f2d83971d5f491",
     "latest_changes": [
-        "Single-Session Enforcement: Only one device can be logged in at a time. Signing in on a new device automatically kicks the previous session.",
-        "Session Guard: Background polling detects when your session has been superseded and redirects to the login screen with a clear message.",
-        "Secure Session Tokens: Each login registers a unique session token in the database, ensuring reliable device-level session tracking."
+                "Features:",
+                "Call Auto-Download: Resolved an issue that prevented calls from being automatically downloaded after sessions, ensuring that all call recordings are properly saved and accessible.",
+                "Dynamic WPM Adjustment: Introduced a new feature that allows users to dynamically adjust words per minute (WPM) during calls, providing greater flexibility in pacing and improving communication effectiveness.",
+                "Customizable Voice Profiles: Added the ability for users to create and customize their own voice profiles, allowing for a more personalized and engaging user experience during calls.",
+                "Bugs:",
+                "Prospect Interruption Mute: Resolved an issue where the system failed to mute the microphone when a prospect interrupted, ensuring a more seamless conversation flow.",
+                "Audio Engine Startup: Addressed a critical bug in the audio engine startup process related to scipy bundling, resulting in improved stability and faster initialization times.",
+                "Microphone Selection: Fixed a problem where users were unable to select their preferred microphone, enhancing user control over audio input settings."
     ],
     "history": [
         {
+            "version": "1.1.0",
+            "date": "2026-04-22",
+            "notes": "Inflection Control, Dynamic WPM Adjustment, Customizable Voice Profiles"
+        },
+
+        {
             "version": "1.0.28",
             "date": "2026-03-26",
-            "notes": "Fixed Prospect Interruption Mute, Fixed Audio Engine Startup (scipy bundling), Fixed Microphone Selection, Fixed Call Auto-Download."
+            "notes": "Fixed Prospect Interruption Mute, Fixed Audio Engine Startup (scipy bundling), Fixed Microphone Selection, Fixed Call Auto-Download.", 
+            "changes": [
+
+                "Single-Session Enforcement: Only one device can be logged in at a time. Signing in on a new device automatically kicks the previous session.",
+                "Session Guard: Background polling detects when your session has been superseded and redirects to the login screen with a clear message.",
+                "Secure Session Tokens: Each login registers a unique session token in the database, ensuring reliable device-level session tracking."
+            ]
         },
         {
             "version": "1.0.26",
