@@ -15,12 +15,6 @@
     ],
     "history": [
         {
-            "version": "1.1.0",
-            "date": "2026-04-22",
-            "notes": "Inflection Control, Dynamic WPM Adjustment, Customizable Voice Profiles"
-        },
-
-        {
             "version": "1.0.28",
             "date": "2026-03-26",
             "notes": "Fixed Prospect Interruption Mute, Fixed Audio Engine Startup (scipy bundling), Fixed Microphone Selection, Fixed Call Auto-Download.", 
